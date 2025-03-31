@@ -1,0 +1,45 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJU2NONlloRFpWMm93RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmla>
+    server: https://3C5805DC749105331E68CB4DA9EC948B.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster-1
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJY3lnQlhsSko1azR3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmla>
+    server: https://F9E96727F4BAA4CF96585880ADAB8976.gr7.us-east-1.eks.amazonaws.com
+  name: eks-cluster.us-east-1.eksctl.io
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJY3lnQlhsSko1azR3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmla>
+    server: https://F9E96727F4BAA4CF96585880ADAB8976.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster-1
+    user: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster-1
+  name: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster-1
+- context:
+    cluster: eks-cluster.us-east-1.eksctl.io
+    user: i-011c76fe98e6eb636@eks-cluster.us-east-1.eksctl.io
+  name: i-011c76fe98e6eb636@eks-cluster.us-east-1.eksctl.io
+- context:
+    cluster: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster
+    user: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster
+  name: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster
+current-context: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:051826694723:cluster/eks-cluster-1
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - eks-cluster-1
+      command: aws
+      interactiveMode: IfAvailable
+      provideClusterInfo: false

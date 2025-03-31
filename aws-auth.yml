@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::009412611595:role/eksctl-k8sb29-cluster-01-nodegroup-NodeInstanceRole-Gp9OrbfQnJgm
+      username: system:node:{{EC2PrivateDNSName}}
+    - rolearn: arn:aws:iam::009412611595:role/admin_role_office
+      username: admin_role_office
+      groups:
+      - system:masters
+  mapUsers: |
+    - userarn: arn:aws:iam::051826694723:user/eks-admin
+      username: eks-admin
+      groups:
+      - system:masters
+kind: ConfigMap
+
+#https://051826694723.signin.aws.amazon.com/console
