@@ -1,7 +1,7 @@
 pipeline {
    agent any
    environment {
-      PROJECT = 'WELCOME TO K8S B32 BATCH - Jenkins Class'
+      PROJECT = 'WELCOME TO K8S BATCH - Jenkins Class'
       DESTROY = "FALSE"
    }
    stages {
