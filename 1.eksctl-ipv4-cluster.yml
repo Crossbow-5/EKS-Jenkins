@@ -91,11 +91,11 @@ eksctl get nodegroups  --cluster=eks-cluster-1 --region=us-east-1
 You cannot downgrade the Kubernetes of an Amazon EKS cluster. Instead, create a new cluster on a previous Amazon EKS version and migrate the workloads.
 
 #       cd
-# mv kubectl kubectl_1.24
-# mv bin bin_1.24 
-# curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.15/2023-01-11/bin/linux/amd64/kubectl
-# chmod +x ./kubectl
-# mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+mv kubectl kubectl_1.24
+mv bin bin_1.24 
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.15/2023-01-11/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
 # kubectl version
 
 ## To view workloads of cluster in eks UI, give arn in aws auth config:
