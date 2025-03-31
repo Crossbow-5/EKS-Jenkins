@@ -14,15 +14,15 @@ metadata:
     alb.ingress.kubernetes.io/success-codes: "200"
     alb.ingress.kubernetes.io/unhealthy-threshold-count: "2"
     #Make sure our SSL Cert and Cluster is in same AWS Account.
-    alb.ingress.kubernetes.io/certificate-arn: 'arn:aws:acm:us-east-2:009412611595:certificate/abac1b18-9713-42a8-9423-3a1da116f1ad'
+    alb.ingress.kubernetes.io/certificate-arn: 'arn:aws:acm:us-east-1:051826694723:certificate/bc924a80-c1d0-4cc7-9c54-04bb5b5781d9'
 spec:
   ingressClassName: alb
   tls:
   - hosts:
-    - "fastapi.k8sb32.xyz"
+    - "fastapi.crossbow.xyz"
     secretName: my-tls-secret-nk
   rules:
-  - host: fastapi.k8sb32.xyz
+  - host: fastapi.crossbow.xyz
     http:
       paths:
         - path: /
