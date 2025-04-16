@@ -1,6 +1,6 @@
 CI/CD Pipeline for Kubernetes (EKS) App Deployment
 
-Automated the deployment of an application (voting app) onto a Kubernetes cluster hosted on **Amazon EKS**.
+Automated the deployment of an application (voting app, also fastapi) onto a Kubernetes cluster hosted on **Amazon EKS**.
 
 The pipeline performs tasks like:
 - Deploying Kubernetes resources (Deployments, Services, Ingress)
