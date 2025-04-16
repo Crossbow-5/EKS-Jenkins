@@ -21,7 +21,7 @@ spec:
         name: nginx
         env:
         - name: APP_NAME
-          value: "K8SB32_EKS_TESTING"
+          value: "K8S_EKS_TESTING"
 
 ---
 apiVersion: v1

@@ -4,7 +4,7 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::009412611595:role/eksctl-k8sb29-cluster-01-nodegroup-NodeInstanceRole-Gp9OrbfQnJgm
+      rolearn: arn:aws:iam::009412611595:role/eksctl-k8s-cluster-01-nodegroup-NodeInstanceRole-Gp9OrbfQnJgm
       username: system:node:{{EC2PrivateDNSName}}
     - rolearn: arn:aws:iam::009412611595:role/admin_role_office
       username: admin_role_office

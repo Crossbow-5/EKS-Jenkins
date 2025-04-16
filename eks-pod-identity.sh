@@ -1,4 +1,4 @@
-name : k8sb32-eks-role-pod-idenity
+name : k8s-eks-role-pod-idenity
 Permissions:
 AmazonEC2ReadOnlyAccess
 AmazonS3ReadOnlyAccess
