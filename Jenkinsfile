@@ -1,7 +1,7 @@
 pipeline {
    agent any
    environment {
-      PROJECT = 'WELCOME TO K8S BATCH - Jenkins Class'
+      PROJECT = 'Jenkins Pipeline for Kubernetes (EKS) App Deployment'
       DESTROY = "FALSE"
    }
    stages {
