@@ -1,4 +1,4 @@
-Jenkins CI/CD Pipeline for Kubernetes (EKS) App Deployment
+CI/CD Pipeline for Kubernetes (EKS) App Deployment
 
 This project is a Jenkins-based CI/CD pipeline designed to automate the deployment of an application (including a FastAPI service and voting app) onto a Kubernetes cluster hosted on **Amazon EKS**.
 
